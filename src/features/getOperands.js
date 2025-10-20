@@ -1,7 +1,8 @@
 export const getOperands = (str, separator) => {
   const customized = separator === null;
-  const operands =
-    separator === null ? str.split(/[,:]/) : str.slice(5).split(separator);
+  const operands = customized
+    ? str.split(/[,:]/)
+    : str.slice(5).split(separator);
   isValidExpression(operands);
   return operands;
 };

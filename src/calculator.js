@@ -1,5 +1,3 @@
-import { Console } from "@woowacourse/mission-utils";
-
 import { checkSeparator } from "./checkSeparator.js";
 import { getOperands } from "./getOperands.js";
 import { sumOperands } from "./sumOperands.js";

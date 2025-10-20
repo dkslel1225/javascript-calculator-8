@@ -1,4 +1,5 @@
 export const getOperands = (str, separator) => {
+  const customized = separator === null;
   const operands =
     separator === null ? str.split(/[,:]/) : str.slice(5).split(separator);
   isValidExpression(operands);
@@ -7,7 +8,8 @@ export const getOperands = (str, separator) => {
 
 const isValidExpression = (operands) => {
   operands.forEach((operand) => {
-    if (isNaN(operand)) throw new Error("숫자가 아닌 값이 있습니다.");
-    if (Number(operand) < 0) throw new Error("음수는 계산할 수 없습니다.");
+    if (isNaN(operand)) throw new Error("[ERROR] 숫자가 아닌 값이 있습니다.");
+    if (Number(operand) < 0)
+      throw new Error("[ERROR] 음수는 계산할 수 없습니다.");
   });
 };

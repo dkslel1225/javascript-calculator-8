@@ -1,8 +1,12 @@
-import { calculator } from "./calculator.js";
+import { calculator } from "./features/calculator.js";
 
 class App {
   async run() {
-    calculator();
+    try {
+      await calculator();
+    } catch (e) {
+      throw e;
+    }
   }
 }
 

@@ -5,7 +5,7 @@ import { getOperands } from "./getOperands.js";
 import { sumOperands } from "./sumOperands.js";
 
 export const calculator = async () => {
-  const input = await Console.readLineAsync("덧셈할 문자열을 입력해 주세요.");
+  const input = await Console.readLineAsync("덧셈할 문자열을 입력해 주세요.\n");
   const str = input.replace(/\s/g, ""); // 공백 제거
   const separator = checkSeparator(str);
   const operands = getOperands(str, separator);
